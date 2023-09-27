@@ -7,16 +7,18 @@ function Banner() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const toRotate = ["Desarrollador Web", "Diseñador Web", "Diseñador UI/UX"];
-  const [text, setText] = useState ('')
-  const [delta, setDelta] = useState (300 - Math.random() * 100)
-  const period = 2000;
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const period = 300;
 
   useEffect(() => {
-        let tiker = setInterval (() => {
-            tick()
-        }, delta)
-        return () => {clearInterval(tiker)}
-  }, [text])
+    let tiker = setInterval(() => {
+      tick();
+    }, delta);
+    return () => {
+      clearInterval(tiker);
+    };
+  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -25,27 +27,32 @@ function Banner() {
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
     setText(updateText);
-  
-    if (isDeleting && updateText === '') {
+
+    if (isDeleting && updateText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(300);
     }
-  
+
     if (!isDeleting && updateText === fullText) {
       setIsDeleting(true);
       setDelta(period);
     }
   };
-  
-  return(
+
+  return (
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <span className="tagline">Bienvenido a mi Portafolio</span>
             <h1>
-              {`hi im webdecoded`} <span className="wrap">{text}</span>{" "}
+              {`yo soy Johan`}{" "}
+              <span className="wrap">
+                {" "}
+                <br /> {text}
+              </span>
+              <span className="bar" >{"|"}</span>
             </h1>
             <p>
               Soy un desarrollador front-end apasionado y experimentado con más
