@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import linkedinIcon from "../img/linkedin.png";
 import githubIcon from "../img/github.png";
-import mailIcon from "../img/whatsapp.png";
+import mailIcon from "../img/mail.png";
 
 function NavbarRes() {
   const [activeLink, setActiveLink] = useState('home')
