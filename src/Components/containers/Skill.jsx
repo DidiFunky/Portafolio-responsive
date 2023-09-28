@@ -4,6 +4,10 @@ import meter3 from "../img/meter3.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../img/color-sharp.png";
+import javascript from "../img/js.png"
+import html from "../img/html.png"
+import css from "../img/css-3.png"
+import react from "../img/physics.png"
 
 export const Skills = () => {
   const responsive = {
@@ -58,6 +62,37 @@ export const Skills = () => {
                 </div>
                 <div className="item">
                   <img src={meter1} alt="Image3" />
+                  <h5>Ciencia de Datos</h5>
+                </div>
+              </Carousel>
+              <h2>Habilidades tecnicas</h2>
+              <p>
+                Tengo habilidades técnicas sólidas en una variedad de lenguajes
+                de programación y herramientas técnicas que me permiten abordar
+                una amplia gama de desafíos tecnológicos. Algunas de mis
+                habilidades técnicas clave incluyen:
+              </p>
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                auto={true} // Habilita la reproducción automática
+                autoPlaySpeed={1000} // Especifica el tiempo de espera en milisegundos (en este caso, 2 segundos)
+                className="owl-carousel owl-theme skill-slider"
+              >
+                <div className="item">
+                  <img src={javascript} alt="Image0" />
+                  <h5>Diseño Web</h5>
+                </div>
+                <div className="item">
+                  <img src={html} alt="Image1" />
+                  <h5>Desarrollo Web</h5>
+                </div>
+                <div className="item">
+                  <img src={css} alt="Image2" />
+                  <h5>Diseño de interfaces UI/UX</h5>
+                </div>
+                <div className="item">
+                  <img src={react} alt="Image3" />
                   <h5>Ciencia de Datos</h5>
                 </div>
               </Carousel>
